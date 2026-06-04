@@ -34,7 +34,10 @@ const AGENCY_PAGES = [
   { id: 'DORIS', url: 'https://www.nyc.gov/site/records/about/agency-mous.page' },
   { id: 'LAW',   url: 'https://www.nyc.gov/site/law/about/interagency-mous.page' },
   { id: 'DOP',   url: 'https://www.nyc.gov/site/probation/about/interagency-mous.page' },
-  { id: 'DFTA2', url: 'https://www.nyc.gov/site/dfta/about/interagency-mous.page' },
+  { id: 'DOC',   url: 'https://www.nyc.gov/site/doc/about/interagency-mous.page' },
+  { id: 'TLC',   url: 'https://www.nyc.gov/site/tlc/about/interagency-mous.page' },
+  { id: 'DCA',   url: 'https://www.nyc.gov/site/dca/about/interagency-mous.page' },
+  { id: 'DHS',   url: 'https://www.nyc.gov/site/dhs/about/interagency-mous.page' },
 ]
 
 const HEADERS = {
@@ -108,7 +111,7 @@ function extractDateFromContext(html, pdfHref) {
 }
 
 // Infer agencies from PDF URL or link text by matching known acronyms
-const KNOWN_AGENCIES = ['HRA','DOF','DOHMH','DOH','DOE','ACS','DHS','NYPD','DOC','HPD','DFTA','DYCD','DOT','DCAS','OMB','SBS','DOB','DORIS','OTI','LAW','MOCJ','OCME','DEP','DSNY','CUNY','OMH','DOP']
+const KNOWN_AGENCIES = ['HRA','DOF','DOHMH','DOH','DOE','ACS','DHS','NYPD','DOC','HPD','DFTA','DYCD','DOT','DCAS','OMB','SBS','DOB','DORIS','OTI','LAW','MOCJ','OCME','DEP','DSNY','CUNY','OMH','DOP','TLC','DCA']
 
 function inferParties(sourceAgency, text, url) {
   const combined = (text + ' ' + url).toUpperCase()
