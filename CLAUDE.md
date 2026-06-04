@@ -13,7 +13,7 @@ npm run preview  # preview the dist/ build locally
 
 ## Deployment
 
-Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`). No manual step needed. The Vite base is `/nyc-mou-visualizer/` — this must stay set in `vite.config.js` or GitHub Pages routing breaks.
+Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`). No manual step needed. The Vite base is `/data-sharing/` — this must stay set in `vite.config.js` or GitHub Pages routing breaks.
 
 ## Data
 
