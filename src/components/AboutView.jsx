@@ -6,7 +6,7 @@ export default function AboutView() {
           <h2>What is a data sharing agreement?</h2>
           <p>
             When two New York City agencies want to share information with each other — resident
-            records, enrollment data, case files — they formalize it in a Memorandum of
+            records, enrollment data, case files — they often formalize it in a Memorandum of
             Understanding (MOU). The MOU specifies what data is shared, for what purpose, who
             can access it, and how long it can be kept. Under Local Law 40 of 2011, NYC agencies
             are required to publish these agreements publicly.
