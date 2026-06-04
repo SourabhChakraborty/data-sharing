@@ -28,16 +28,27 @@ Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/deploy.yml`)
 The full pipeline:
 
 ```bash
-# 1. Scrape PDF links from all agency MOU pages
+# 1. Scrape PDF links from all agency MOU pages → /tmp/scraped.json
 node scraper/scrape.cjs --output /tmp/scraped.json --verbose
 
-# 2. Download each PDF and extract text/metadata
-python3 scraper/enrich.py --input /tmp/processed.json --output /tmp/enriched.json
+# 2. Post-process: clean titles, infer parties/categories, dedup
+#    (inline Python — see previous session for the processing script)
 
-# 3. Manual review before merging into agreements.json
+# 3. Enrich with vision-based descriptions from Claude API
+#    Requires ANTHROPIC_API_KEY; uses claude-haiku-4-5 for cost efficiency
+python3 scraper/describe.py --data src/data/agreements.json
+
+# 4. Manual review before committing
 ```
 
-Note: nyc.gov returns 403 on some pages for automated requests. The scraper logs warnings and skips those. Output needs review before merging — particularly check category assignments and party detection, which are heuristic.
+`scraper/describe.py` downloads each PDF, renders the first 2 pages as PNG images via PyMuPDF, and sends them to the Claude vision API asking for: a 1–2 sentence description, the actual parties named in the document, and the data types being shared. This is the right approach because most NYC agency PDFs are scanned — plain text extraction yields only signature blocks.
+
+Known issues to watch for after re-scraping:
+- `DSS` and `HRA` may both appear as parties for the same entity — if an entry has both, remove `DSS` (HRA is the source-page name). DSS-only entries (newer docs) are fine.
+- `DOH` should be `DOHMH`
+- `Contact Information` tends to be over-extracted by the vision model (every MOU mentions addresses); strip it from `dataTypes`
+- Years extracted from PDF text can be wrong (e.g. 1983 for a 2023 agreement); treat any year before 2011 as suspect
+- nyc.gov returns 403 on some pages; the scraper logs warnings and skips those
 
 ## Architecture
 
@@ -57,11 +68,20 @@ Breakpoint: `640px` in `App.css`. Key mobile behaviors:
 - Legend hidden (`network-legend--desktop`)
 - All interactive controls meet 44px touch target minimum
 
+## Skills
+
+Use these skills proactively — don't wait to be asked:
+
+- `/verify` — after any UI change, screenshot the live site at desktop (1440×900) and mobile (390×844) and check all four tabs. Caught the detail-panel-persisting-on-tab-switch bug, bad year display, and Contact Information dominating the bubble chart.
+- `/code-review` — before PRs touching data logic or the scraper pipeline
+- `/simplify` — after larger refactors to the filter or render logic
+
 ## UX Reviews
 
-After batches of UI changes, spin up a background UX review agent:
-1. Take screenshots: `npx playwright screenshot --browser chromium --viewport-size "1440,900" <url> /tmp/desktop.png` and `390,844` for mobile
-2. Pass screenshots + relevant source files to the agent
-3. Ask for top issues prioritized by impact with fix suggestions
+After batches of UI changes, run `/verify` against the live GitHub Pages URL (`https://sourabhchakraborty.github.io/data-sharing/`). Check all four tabs (Network, Data Types, Table, About) at both viewport sizes. Things that have bitten us before:
 
-This caught 8 real issues (touch targets, contrast, mobile layout, missing affordances) in a single pass.
+- Detail panel state persisting across tab switches
+- Year filter silently dropping entries (check that header count matches total)
+- Data type bubbles dominated by a single over-extracted type
+- Mobile table title overflow
+- Party tags referencing agencies not in the agencies list (renders as orphan node in network)
