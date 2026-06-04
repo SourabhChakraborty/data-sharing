@@ -163,7 +163,7 @@
         "Protected Health Information"
       ],
       "jurisdiction": "nyc",
-      "pdfUrl": null,
+      "pdfUrl": "https://www1.nyc.gov/assets/hra/downloads/pdf/HRA%20_%20DOF-DARB-Data-Share-MOU-and-BAA.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "Data sharing between HRA and DOF for the Data Analytics and Research Bureau (DARB), including a Business Associate Agreement covering protected health information.",
       "data_source": "confirmed"
@@ -185,7 +185,7 @@
         "Program Participation"
       ],
       "jurisdiction": "nyc",
-      "pdfUrl": null,
+      "pdfUrl": "https://www1.nyc.gov/assets/hra/downloads/pdf/HRA-CUNY-DOHMH-Data-Sharing-HASA-pilot-program.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "Three-party data sharing agreement between HRA, CUNY, and DOHMH supporting the HIV/AIDS Services Administration (HASA) pilot program.",
       "data_source": "confirmed"
@@ -206,7 +206,7 @@
         "Contact Information"
       ],
       "jurisdiction": "nyc",
-      "pdfUrl": null,
+      "pdfUrl": "https://www1.nyc.gov/assets/hra/downloads/pdf/HRA-DOE-Middle-School-IDNYC-cards.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "MOU governing distribution of IDNYC cards through DOE middle schools, covering data sharing for enrollment and verification.",
       "data_source": "confirmed"
