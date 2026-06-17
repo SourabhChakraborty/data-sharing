@@ -180,7 +180,7 @@
       "pdfUrl": "https://www1.nyc.gov/assets/hra/downloads/pdf/HRA%20_%20DOF-DARB-Data-Share-MOU-and-BAA.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "DOF and HRA share Medicaid Surplus Program client data to enable online payment processing for eligible individuals paying excess income to local social services districts, with DOF receiving daily electronic transfers of client identifying information for payment operations.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "hra-cuny-dohmh-hasa-2019",
@@ -203,7 +203,7 @@
       "pdfUrl": "https://www1.nyc.gov/assets/hra/downloads/pdf/HRA-CUNY-DOHMH-Data-Sharing-HASA-pilot-program.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "DSS/HRA, DOHMH, and CUNY share HASA client data including names, SSNs, report dates, and HIV-related laboratory results to evaluate three pilot housing programs (Permanent Supportive Housing, Transitional Supportive Housing, and Commercial Single-Room Occupancy Housing) aimed at improving housing stability and HIV viral suppression outcomes.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "hra-doe-idnyc-2019",
@@ -224,7 +224,7 @@
       "pdfUrl": "https://www1.nyc.gov/assets/hra/downloads/pdf/HRA-DOE-Middle-School-IDNYC-cards.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "HRA and DOE establish a pilot program to issue IDNYC Middle School Cards to students ages 10 and up enrolled in participating DOE middle schools. The agreement sets forth the enrollment process, roles, and responsibilities for card issuance.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "dycd-hra-idnyc-2022",
@@ -245,7 +245,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/dycd/downloads/pdf/mou/220419_DYCD_HRA_MOU_IDNYC_Enrollment.pdf",
       "sourceUrl": "https://www.nyc.gov/site/dycd/about/about-dycd/interagency-mous.page",
       "description": "DSS/HRA grants DYCD read-only access to its participant tracking system to verify that youth applying for NYC Identification Cards (IDNYC) are enrolled in DYCD's Summer Youth Employment Program (SYEP) or Work, Learn, and Grow Employment Program (WLGEP).",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "dohmh-hra-test-trace-2020",
@@ -264,7 +264,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/doh/downloads/pdf/about/mou-1-hra-2021.pdf",
       "sourceUrl": "https://www.nyc.gov/site/doh/about/about-doh/interagency-mous.page",
       "description": "HRA and DOHMH share Coronavirus-related health guidance and testing resources by using HRA's telecommunications vendors to send automated robocalls with recorded health and safety messages to NYC residents in targeted neighborhoods.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "hra-omh-dopis-2018",
@@ -287,7 +287,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/hra/downloads/pdf/HRA%20_OMH_DOPIS_data_sharing.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "OMH shares monthly data on individuals proposed for discharge from NYC-area psychiatric centers after five or more years of stay with HRA/DOPIS to enable assessment of discharge eligibility, service provision, and supportive housing placement.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "hra-dohmh-healthstat-2020",
@@ -309,7 +309,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/hra/downloads/pdf/Health-Stat-MOU-FY20-22-5.7.2020-notarized.pdf",
       "sourceUrl": "https://www.nyc.gov/site/hra/about/interagency-memoranda-understanding-mous.page",
       "description": "HRA provides funding and oversight for DOHMH to deliver Medicaid application assistance, health insurance education, and managed care support to uninsured and Medicaid-eligible New Yorkers, including targeted outreach and enrollment services for vulnerable populations.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "dof-hra-coop-2019",
@@ -329,7 +329,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/finance/downloads/pdf/mou/coop_agreement_hra.pdf",
       "sourceUrl": "https://www.nyc.gov/site/finance/about/interagency-mou.page",
       "description": "The Department of Finance's Sheriff's Division provides law enforcement officers and support personnel to the Human Resources Administration's Office of Child Support Enforcement to serve summons and subpoenas and execute arrest warrants issued by the Family Court in child support cases.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "dof-dhs-hhs-exchange",
@@ -355,7 +355,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/finance/downloads/pdf/mou/inter-agency_data_exchange_hhs.pdf",
       "sourceUrl": "https://www.nyc.gov/site/finance/about/interagency-mou.page",
       "description": "Health and human services agencies share client data through HHS-Connect infrastructure to improve service delivery, reduce data duplication, and enable integrated case management across multiple benefit and housing programs.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "oti-acs-mycity-2023",
@@ -380,7 +380,7 @@
       "pdfUrl": "https://www.nyc.gov/assets/oti/downloads/pdf/about/mycity-data-sharing-agreement.pdf",
       "sourceUrl": "https://www.nyc.gov/content/oti/pages/data-analytics/citywide-data-sharing",
       "description": "OTI, ACS, DHS, DOE, and HRA share childcare-related data to develop a unified online intake form for subsidized childcare services through the MyCity digital portal. Data sources include ACS's childcare information systems, HRA's enterprise data warehouse, and DHS homeless services records.",
-      "data_source": "confirmed"
+      "data_source": "scraped"
     },
     {
       "id": "hra-hra-cuny-unlocking-unemployment-interagency-agrmt",

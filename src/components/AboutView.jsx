@@ -54,14 +54,66 @@ export default function AboutView() {
           </div>
         </section>
 
+        <section className="about-section">
+          <h2>Methodology</h2>
+
+          <div className="about-reason">
+            <h3>Data collection</h3>
+            <p>
+              Agreements are collected from NYC agency MOU pages published under Local Law 40
+              of 2011. A Node.js scraper crawls each agency's dedicated MOU listing, extracts
+              PDF links, and records the title, date, and source URL for every agreement found.
+              Each entry links directly to the published government document.
+            </p>
+          </div>
+
+          <div className="about-reason">
+            <h3>AI-generated summaries</h3>
+            <p>
+              The description, parties, and data types shown for each agreement are generated
+              by the Claude AI model (claude-haiku-4-5), not extracted by hand. Most NYC agency
+              PDFs are scanned images rather than machine-readable text, so plain text extraction
+              yields only signature blocks and headers. Instead, a Python script renders the
+              first two pages of each PDF as images and sends them to Claude's vision API, which
+              returns a short summary, the parties named in the document, and the categories of
+              data being shared.
+            </p>
+            <p>
+              AI-generated content can be incomplete or imprecise. Party names and data types
+              are the model's best reading of the document — they have not been independently
+              verified. Always consult the linked PDF for authoritative information.
+            </p>
+          </div>
+
+          <div className="about-reason">
+            <h3>Limitations</h3>
+            <p>
+              Coverage is limited to agencies that maintain public MOU pages and to agreements
+              whose PDFs are accessible. Some nyc.gov URLs return errors; those agreements are
+              skipped. Dates extracted from older scanned documents can be unreliable — any
+              year before 2011 (when the law took effect) should be treated with skepticism.
+              The network shows only relationships visible in this dataset, not the complete
+              universe of city data-sharing.
+            </p>
+          </div>
+        </section>
+
         <section className="about-section about-section--meta">
           <p>
             Data sourced from NYC agency MOU pages under{' '}
             <a href="https://www.nyc.gov/site/records/about/agency-mous.page" target="_blank" rel="noreferrer">
               Local Law 40 of 2011
             </a>
-            . Confirmed entries are manually curated; scraped entries are extracted directly
-            from agency MOU pages and each links to a published PDF.
+            . Each entry links to a published government PDF. Agreement summaries,
+            parties, and data types are AI-generated and may be incomplete — always verify
+            against the source document.
+          </p>
+          <p>
+            Source code and scraper available on{' '}
+            <a href="https://github.com/SourabhChakraborty/data-sharing" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            .
           </p>
         </section>
       </div>
